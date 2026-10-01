@@ -99,6 +99,7 @@ button.f-buy{border:0;cursor:pointer;font-family:var(--mono)}
 .figwrap{position:absolute;left:0;right:0;top:0;height:var(--H)}
 .fig{position:absolute;left:50%;bottom:0;height:100%;transform:translateX(-50%);filter:drop-shadow(22px 26px 24px var(--shadow));pointer-events:none}
 .figpar{position:absolute;inset:0}
+.fig-img{width:auto;max-width:none;display:block}
 
 #band{position:absolute;top:33%;left:10px;right:10px;height:250px;transform:translateY(-50%);z-index:3}
 @media (min-width:900px){#band{left:50%;right:auto;width:min(1040px,94vw);height:230px;transform:translate(-50%,-50%)}}
@@ -365,6 +366,9 @@ html:not(.rich) .spk{display:none}
       onerror="this.replaceWith(document.createRange().createContextualFragment('YOUR<br>NAME'))"></div>
     <div class="figwrap">
       <div class="figpar">
+        <!-- FIGURE SLOT: img/figure.png  (transparent PNG, 2000 x 2600, eyes 33% from top) -->
+        <img class="fig fig-img" src="img/figure.png" alt="" decoding="async"
+          onload="this.nextElementSibling&&this.nextElementSibling.remove()" onerror="this.remove()">
         <svg class="fig" viewBox="0 0 400 520" aria-hidden="true">
           <defs>
             <linearGradient id="sk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A2ACA7"/><stop offset="1" stop-color="#66706C"/></linearGradient>
@@ -1049,4 +1053,3 @@ setTimeout(start,1200);
 </script>
 </body>
 </html>
- 
